@@ -43,7 +43,15 @@ public final class CourseToolkit {
 
         return true;
     }
-//    public static double average(int[] values) {
-//
-//    }
+    public static double average(int[] values) {
+
+        if (values.length == 0) throw new IllegalArgumentException();
+        double sum = 0;
+
+        for (double element : values) {
+            sum += element;
+        }
+
+        return (sum / values.length);
+    }
 }

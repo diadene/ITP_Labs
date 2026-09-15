@@ -72,4 +72,25 @@ class CourseToolkitTest {
 
     }
 
+    // Average tests
+    @Test
+    void validArray() {
+        double result = CourseToolkit.average(new int[]{4, 23, 5, 2, 7});
+
+        assertEquals(8.2, result);
+    }
+
+    @Test
+    void emptyArray() {
+
+        assertThrows(IllegalArgumentException.class, () -> CourseToolkit.average(new int[]{}));
+    }
+
+    @Test
+    void negativeArray() {
+        double result = CourseToolkit.average(new int[]{-4, -23, -5, -2, 7});
+
+        assertEquals(-5.4, result);
+    }
+
 }

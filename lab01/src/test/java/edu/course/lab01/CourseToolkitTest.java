@@ -20,4 +20,34 @@ class CourseToolkitTest {
 
         assertFalse(result);
     }
+
+// IsPrime method tests
+
+    @Test
+    void isPrimeNumber() {
+        boolean result = CourseToolkit.isPrime(2);
+        assertTrue(result);
+    }
+
+    @Test
+    void isNotPrimeNumber() {
+        boolean result = CourseToolkit.isPrime(12);
+
+        assertFalse(result);
+    }
+
+    @Test
+    void NegativeNumber() {
+        boolean result = CourseToolkit.isPrime(-1);
+
+        assertFalse(result);
+    }
+
+    @Test
+    void SqrtNumber() {
+        boolean result = CourseToolkit.isPrime(121);
+
+        assertFalse(result);
+    }
+
 }

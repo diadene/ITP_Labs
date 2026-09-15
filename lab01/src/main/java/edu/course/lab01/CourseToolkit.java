@@ -1,5 +1,7 @@
 package edu.course.lab01;
 
+import java.util.Locale;
+
 /**
  * Небольшие методы для первой лабораторной работы.
  */
@@ -29,9 +31,18 @@ public final class CourseToolkit {
         }
         return true;
     }
-//    public static boolean isPalindrome(String text) {
-//
-//    }
+    public static boolean isPalindrome(String text) {
+
+        if (text == null) throw new IllegalArgumentException();
+
+        char[] stringArray = text.toCharArray();
+        if (stringArray.length <= 2) return false;
+        for (int i = 0; i >= (stringArray.length % 2); i++) {
+            if (stringArray[i] != stringArray[-(i + 1)] ) return false;
+        };
+
+        return true;
+    }
 //    public static double average(int[] values) {
 //
 //    }

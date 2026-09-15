@@ -1,6 +1,8 @@
 package edu.course.lab01;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -93,4 +95,19 @@ class CourseToolkitTest {
         assertEquals(-5.4, result);
     }
 
+    // Extra. Parameterized Tests
+    @ParameterizedTest
+    @CsvSource({
+            "2, true",
+            "4, false" ,
+            "3, true",
+            "-1, false",
+            "100, false"
+    })
+
+    void isPrimeTests(int number, boolean expected) {
+
+        boolean result = CourseToolkit.isPrime(number);
+        assertEquals(expected, result);
+    }
 }

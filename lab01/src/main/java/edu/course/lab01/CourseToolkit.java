@@ -1,7 +1,5 @@
 package edu.course.lab01;
 
-import java.util.Locale;
-
 /**
  * Небольшие методы для первой лабораторной работы.
  */
@@ -53,5 +51,25 @@ public final class CourseToolkit {
         }
 
         return (sum / values.length);
+    }
+    public static double min (double[] values) {
+        double min = values[0];
+        for ( double i : values) {
+            if (i < min) {
+                min = i;
+            };
+        };
+        return min;
+    }
+
+    public static double max (double[] values) {
+        double max = values[0];
+
+        for (double i : values) {
+            if (i > max) {
+                max = i;
+            };
+        };
+        return max;
     }
 }

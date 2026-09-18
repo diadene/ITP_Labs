@@ -110,4 +110,26 @@ class CourseToolkitTest {
         boolean result = CourseToolkit.isPrime(number);
         assertEquals(expected, result);
     }
+    @Test
+    void min_test1() {
+        double result = CourseToolkit.min(new double []{-4.5, -23.2, -23.3, -5, -2, 7});
+        assertEquals(-23.3, result);
+    }
+
+    @Test
+    void min_test2() {
+        double result = CourseToolkit.min(new double []{15.2, 100, 5.2, -2.5, 7.1, 12});
+        assertEquals(-2.5, result);
+    }
+
+    @Test
+    void max_test1() {
+        double result = CourseToolkit.max(new double []{-4.5, -23.2, -23.3, -5, -2, 7});
+        assertEquals(7, result);
+    }
+    @Test
+    void max_test2() {
+        double result = CourseToolkit.max(new double []{15.2, 100, 5.2, -2.5, 7.1, 12});
+        assertEquals(100, result);
+    }
 }
